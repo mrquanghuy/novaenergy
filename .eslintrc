@@ -1,0 +1,92 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint-config-standard"
+  ],
+  "env": {
+    "browser": false,
+    "node": true
+  },
+  "globals": {
+    "fetch": true,
+    "window": true,
+    "__DEV__": true,
+    "navigator": true,
+    "ReactElement": true,
+    "requestAnimationFrame": true,
+    "jest": true,
+    "Iterable": true,
+    "Action": true,
+    "FormData": true
+  },
+  "plugins": [
+    "react",
+    "react-native",
+    "flowtype"
+  ],
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  },
+  "rules": {
+    "comma-dangle": "error",
+    "camelcase": 1,
+    "react/jsx-boolean-value": 0,
+    "react/sort-comp": 0,
+    "arrow-body-style": 0,
+    "no-nested-ternary": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/extensions": 0,
+    "import/no-unresolved": 1,
+    "react/jsx-curly-brace-presence": 0,
+    "react/jsx-wrap-multilines": "off",
+    "react/destructuring-assignment": "off",
+    "import/prefer-default-export": 0,
+    "global-require": "off",
+    "prefer-promise-reject-errors": "off",
+    "padded-blocks": "off",
+    "react/no-typos": "off",
+    "no-underscore-dangle": "off",
+    // Indent with 4 spaces
+    "indent": ["error", 4],
+
+    // Indent JSX with 4 spaces
+    "react/jsx-indent": ["error", 4],
+
+    // Indent props with 4 spaces
+    "react/jsx-indent-props": ["error", 4],
+    "no-tabs": "off",
+    "handle-callback-err": "off",
+    //    "linebreak-style": [
+    //      "error",
+    //      "unix"
+    //    ],
+    "brace-style": [
+      "error",
+      "1tbs"
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    // disable rules from base configurations
+    "no-console": "off",
+    "no-unreachable": "warn",
+    "no-undef": "off",
+    "semi": "off",
+    "no-return-assign": "off",
+    "no-unused-vars": "off", // used as Tag display no unused,
+    "no-useless-escape": "off"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "legacyDecorators": true
+    }
+  }
+}
