@@ -96,6 +96,7 @@ export default class Register extends React.Component {
                     }
                 });
             } else {
+                alert('response' + json)
                 Toast.show({
                     text: 'Đã xảy ra lỗi khi đăng kí. Vui lòng thử lại',
                     buttonText: 'Okay',
@@ -104,6 +105,7 @@ export default class Register extends React.Component {
             }
         }).catch((err) => {
             console.log(err);
+            alert(err)
             Toast.show({
                 text: 'Đã xảy ra lỗi khi đăng kí. Vui lòng thử lại',
                 buttonText: 'Okay',
@@ -117,19 +119,19 @@ export default class Register extends React.Component {
             <Root>
                 <Container style={{ paddingHorizontal: 24 }}>
                     <Content >
-                        <Item stackedLabel>
+                        <Item stackedLabel style={{ marginTop: 24 }}>
                             <Label>Họ tên </Label>
                             <Input onChangeText={this.onchangeName}/>
                         </Item>
-                        <Item stackedLabel >
+                        <Item stackedLabel style={{ marginTop: 24 }}>
                             <Label>Số điện thoại </Label>
                             <Input onChangeText={this.onchangePhone}/>
                         </Item>
-                        <Item stackedLabel>
+                        <Item stackedLabel style={{ marginTop: 24 }}>
                             <Label>Email </Label>
                             <Input onChangeText={this.onchangeEmail}/>
                         </Item>
-                        <Item stackedLabel>
+                        <Item stackedLabel style={{ marginTop: 24 }}>
                             <Label>Địa chỉ </Label>
                             <Input
                                 multiline
@@ -138,7 +140,7 @@ export default class Register extends React.Component {
                             />
                         </Item>
 
-                        <Button block info style={{ marginTop: 30 }} onPress={this.submitForm}>
+                        <Button block info style={{ marginTop: 24, marginBottom: 24 }} onPress={this.submitForm}>
                             <Text>Bắt đầu </Text>
                         </Button>
                     </Content>
